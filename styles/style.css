@@ -2,9 +2,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 /* common styles  */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f3f1ff;
+}
+
+nav {
+    width: auto;
+    height: 94px;
+    background-color: #562EFF;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 29%;
+}
+
+.header-left {
+    display: flex;
+    padding-left: 285px;
+    padding-top: 20px;
+    column-gap: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header-right {
+    display: flex;
+    padding-top: 25px;
+    padding-right: 280px;
+
+}
+
+.header-right ul {
+    display: flex;
+    list-style: none;
+
+
+}
+
+.menu-bar li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+#nav-icon {
+    width: 40.42px;
+    height: 51px;
 }
 
 main {
@@ -152,8 +202,14 @@ hr {
 /* mobile device 
 --------------------------------*/
 @media screen and (max-width: 688px) {
+    .header {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+    }
 
-    .container {
+    .container,
+    .header {
         width: 100%;
     }
 
@@ -178,8 +234,15 @@ hr {
 
 /* tablet device */
 @media screen and (min-width:688px) and (max-width:992px) {
-    .container {
+    .header {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+    }
+
+    .container,
+    .header {
         width: 100%;
+        justify-content: center;
     }
 
     .players,
